@@ -29,35 +29,29 @@ U‑Net‑PyTorch/
 └── README.md                       # this document
 ```
 
----
 
-## Highlights
+## Scores Achieved  
 
-• Classic U‑Net with skip connections (encoder/decoder)  
-• Binary mask head (1 channel) with sigmoid at inference  
-• Dice as the primary metric; BCEWithLogitsLoss commonly used  
-• Minimal utilities for overlays and mask comparisons  
-• Notebook‑first workflow for quick iteration  
+**Benchmark run:** trained for **64 epochs** and achieved:   
+• **Train:** 
+ · Dice Score: 0.93 
+• **Test:** 
+ · Dice Score: 0.80 
+ 
 
----
+**Trained weights are included at `U‑Net/checkpoint.pth`.**
+
 
 ## Sample Segmentation Results
 
 Below are two example outputs produced by the U-Net pipeline while being tested:
 
-###Comparison between the output and the ground truth segemntation in testing
+###Comparison between the output and the ground truth segemntation in testing  
 ![Segmentation Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/162be42e858d2cc66024425f5293f52a38bbb23e/segmentation_comparison.png)
 
-###Comparison between the predicted mask by the model and the ground truth mask in testing
+###Comparison between the predicted mask by the model and the ground truth mask in testing  
 ![Mask Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/aa32f4b3cc8450f17b6bf56eaa12b6467fce363c/mask_comparison.png)
 
-
-
-**Benchmark run:** trained for **64 epochs** and achieved:   
-· **Dice 0.93 (train)**  
-· **Dice 0.80 (test)**.  
-
-**Trained weights are included at `U‑Net/checkpoint.pth`.**
 
 ---
 
