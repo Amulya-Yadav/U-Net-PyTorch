@@ -1,6 +1,6 @@
 # U‑Net-PyTorch
 
-An end‑to‑end, under‑the‑hood tour of **U‑Net** for binary image segmentation — starting with **preparing images and masks**, continuing through the **encoder–decoder with skip connections and the loss/metric choices**, and finishing with **training, evaluation, and crisp visualizations**. Built in **PyTorch** for a clean, **reproducible pipeline you can read, tweak, and reuse**.
+An **end‑to‑end, under‑the‑hood** implementation of **U‑Net** for binary image segmentation — starting with **preparing images and masks**, continuing through the **encoder–decoder with skip connections and the loss/metric choices**, and finishing with **training, evaluation, and crisp visualizations**. Built in **PyTorch** for a clean, **reproducible pipeline you can read, tweak, and reuse**.
 
 ---
 
@@ -32,11 +32,11 @@ U‑Net‑PyTorch/
 
 ## Scores Achieved  
 
-**Benchmark run:** trained for **64 epochs** and achieved:   
-• **Train:** 
- · Dice Score: 0.93 
-• **Test:** 
- · Dice Score: 0.80 
+**Benchmark run:** trained for **64 epochs** and achieved:  
+• **Train:**  
+ · Dice Score: 0.93  
+• **Test:**  
+ · Dice Score: 0.80  
  
 
 **Trained weights are included at `U‑Net/checkpoint.pth`.**
@@ -47,9 +47,11 @@ U‑Net‑PyTorch/
 Below are two example outputs produced by the U-Net pipeline while being tested:
 
 ###Comparison between the output and the ground truth segemntation in testing  
+
 ![Segmentation Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/162be42e858d2cc66024425f5293f52a38bbb23e/segmentation_comparison.png)
 
 ###Comparison between the predicted mask by the model and the ground truth mask in testing  
+
 ![Mask Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/aa32f4b3cc8450f17b6bf56eaa12b6467fce363c/mask_comparison.png)
 
 
