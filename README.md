@@ -127,7 +127,7 @@ Notes:
 * Loss:   **BCEWithLogitsLoss + Dice**
 * Checkpointing: best weights saved to `checkpoint.pth`  
 
-**Tips:**
+####**Tips:**
 
 • Start with a moderate image size if GPU memory is limited. 
 • Use stronger data augmentation techniques (Horizontal Flip, ShiftScaleRotate, Blur, etc.)  
@@ -143,17 +143,17 @@ Notes:
 • **All‑black or all‑white outputs** → check mask normalization and loss/thresholding.  
 • **Tensor size mismatch on skip connections** → verify resize/crop/stride consistency. 
 
----
+
 
 ## The Most Important Tip  
 • **Experiment with the code!** This is the best way to understand / learn all the code / theory related to the given topic.  
 
----
+
 ## Contributing
 
 Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky/...), multi‑class extensions, documentation improvements, other improvements to the implementation.
 
----
+
 
 ## Acknowledgements
 
