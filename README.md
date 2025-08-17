@@ -113,7 +113,6 @@ DATASET_ROOT/
 ```
 
 #### **Notes:**
-
 • Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.
 • Images are resized/normalized in transforms; keep image size consistent across training/eval.
 • For imbalanced foreground, consider stronger augmentation or changing the loss / adding a weight to a paritucal part of the loss.
