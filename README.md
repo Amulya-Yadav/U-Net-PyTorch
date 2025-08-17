@@ -112,10 +112,10 @@ DATASET_ROOT/
 ...
 ```
 
-#### **Notes:**
-• Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.
-• Images are resized/normalized in transforms; keep image size consistent across training/eval.
-• For imbalanced foreground, consider stronger augmentation or changing the loss / adding a weight to a paritucal part of the loss.
+### **Notes:**
+• Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.  
+• Images are resized/normalized in transforms; keep image size consistent across training/eval.  
+• For imbalanced foreground, consider stronger augmentation or changing the loss / adding a weight to a paritucal part of the loss.  
 
 ---
 
@@ -126,7 +126,7 @@ DATASET_ROOT/
 * Loss:   **BCEWithLogitsLoss + Dice**
 * Checkpointing: best weights saved to `checkpoint.pth`  
 
-#### **Tips:**
+### **Tips:**
 
 • Start with a moderate image size if GPU memory is limited. 
 • Use stronger data augmentation techniques (Horizontal Flip, ShiftScaleRotate, Blur, etc.)  
