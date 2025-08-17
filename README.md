@@ -1,6 +1,6 @@
 # U‑Net-PyTorch
 
-An **end-to-end PyTorch implementation of U-Net** for binary image segmentation: **from data preparation through the encoder–decoder with skip connections to training, evaluation, and visualization.** **Applied to brain tumor segmentation** — a challenging medical imaging task with subtle boundaries and class imbalance.”
+An **end-to-end PyTorch implementation of U-Net** for binary image segmentation: **from data preparation through the encoder–decoder with skip connections to training, evaluation, and visualization.** **Applied to brain tumor segmentation** — a challenging medical imaging task with subtle boundaries and class imbalance.
 
 
 ---
