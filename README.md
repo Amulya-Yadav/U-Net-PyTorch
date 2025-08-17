@@ -10,7 +10,7 @@ An **end-to-end, under-the-hood** implementation of **U-Net** for **binary image
 ```
 U‑Net‑PyTorch/
 ├── U‑Net/                          # directory containing the notebook and checkpoint
-│ ├── U‑Net.ipynb                   # end‑to‑end pipeline notebook focused on brain-tumor segmentation
+│ ├── U‑Net.ipynb                   # end-to-end pipeline notebook (brain-tumor segmentation)
 │ │ ├── Dataset loading & preprocessing
 │ │ ├── U‑Net architecture definition
 │ │ ├── Loss & optimizer setup
@@ -43,7 +43,7 @@ U‑Net‑PyTorch/
   - Dice Score: **0.80**
   - Loss: **0.2422**
 
-**Trained weights are included at `U‑Net/checkpoint.pth`.**
+**Trained weights are included at** `U‑Net/checkpoint.pth`.
 
 ---
 ## Sample Segmentation Results
