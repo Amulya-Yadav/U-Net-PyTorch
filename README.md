@@ -8,19 +8,19 @@ A fast, compact implementation of **U‑Net** for binary semantic segmentation i
 
 ```
 U‑Net‑PyTorch/
-├── U‑Net/ # directory containing the notebook and checkpoint
-│ ├── U‑Net.ipynb               # end‑to‑end pipeline notebook
+├── U‑Net/                          # directory containing the notebook and checkpoint
+│ ├── U‑Net.ipynb                   # end‑to‑end pipeline notebook
 │ │ ├── Dataset loading & preprocessing
 │ │ ├── U‑Net architecture definition
 │ │ ├── Loss & optimizer setup
 │ │ ├── Training loop with logging & checkpointing
 │ │ ├── Dice coefficient evaluation
 │ │ └── Visualization of predictions vs. ground truth
-│ └── checkpoint.pth            # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
-├── segmentation_comparison.png # overlay: image + ground truth mask | image + predicted mask
-├── mask_comparison.png # side‑by‑side: image | ground truth | prediction
-├── LICENSE             # MIT License text
-└── README.md           # this document
+│ └── checkpoint.pth                # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
+├── segmentation_comparison.png     # overlay: image + ground truth mask | image + predicted mask
+├── mask_comparison.png             # side‑by‑side: image | ground truth | prediction
+├── LICENSE                         # MIT License text
+└── README.md                       # this document
 ```
 
 ---
