@@ -52,13 +52,13 @@ Below are two example outputs produced by the U-Net pipeline while being tested:
 
 
 
-#### Model Output vs. Ground Truth Segmentation (Test)  
+#### Ground Truth Segmentation vs. Model Output (Test)  
 
 ![Segmentation Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/162be42e858d2cc66024425f5293f52a38bbb23e/segmentation_comparison.png)
 
 
 
-#### Mask Prediction vs. Ground Truth (Test) 
+#### Ground Truth vs. Predicted Mask (Test) 
 
 ![Mask Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/aa32f4b3cc8450f17b6bf56eaa12b6467fce363c/mask_comparison.png)
 
