@@ -144,17 +144,17 @@ Notes:
 • **Tensor size mismatch on skip connections** → verify resize/crop/stride consistency. 
 
 
-
+---
 ## The Most Important Tip  
 • **Experiment with the code!** This is the best way to understand / learn all the code / theory related to the given topic.  
 
-
+---
 ## Contributing
 
 Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky/...), multi‑class extensions, documentation improvements, other improvements to the implementation.
 
 
-
+---
 ## Acknowledgements
 
 Ronneberger, Fischer, Brox — *U‑Net: Convolutional Networks for Biomedical Image Segmentation* (MICCAI 2015)
