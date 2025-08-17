@@ -36,12 +36,12 @@ U‑Net‑PyTorch/
 **Benchmark run** — trained for **64 epochs**, results:  
 
 - **Train**  
-  - *Dice Score*: **0.93**
-  - *Loss*: **0.0948**
+  - *Dice Score*: ***0.93***
+  - *Loss*: ***0.0948***
 
 - **Test**  
-  - *Dice Score*: **0.80**
-  - *Loss*: **0.2422**
+  - *Dice Score*: ***0.80***
+  - *Loss*: ***0.2422***
 
 **Trained weights are included at** `U‑Net/checkpoint.pth`.
 
