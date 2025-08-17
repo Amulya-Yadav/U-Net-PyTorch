@@ -8,24 +8,30 @@ A fast, compact implementation of **U‑Net** for binary semantic segmentation i
 
 ```
 U‑Net‑PyTorch/
-├── U‑Net/
-│   ├── U‑Net.ipynb                 # main notebook (full pipeline)
-│   ├── checkpoint.pth              # trained weights from the reference run (64 epochs)
-│   ├── segmentation_comparison.png # overlay: image + predicted mask
-│   └── mask_comparison.png         # image | ground truth | prediction
-├── LICENSE
-└── README.md
+├── U‑Net/ # directory containing the notebook and checkpoint
+│ ├── U‑Net.ipynb # end‑to‑end pipeline notebook
+│ │ ├── Dataset loading & preprocessing
+│ │ ├── U‑Net architecture definition
+│ │ ├── Loss & optimizer setup
+│ │ ├── Training loop with logging & checkpointing
+│ │ ├── Dice coefficient evaluation
+│ │ └── Visualization of predictions vs. ground truth
+│ └── checkpoint.pth # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
+├── segmentation_comparison.png # overlay: image + ground truth mask | image + predicted mask
+├── mask_comparison.png # side‑by‑side: image | ground truth | prediction
+├── LICENSE # MIT License text
+└── README.md # this document
 ```
 
 ---
 
 ## Highlights
 
-• Classic U‑Net with skip connections (encoder/decoder)
-• Binary mask head (1 channel) with sigmoid at inference
-• Dice as the primary metric; BCEWithLogitsLoss commonly used
-• Minimal utilities for overlays and mask comparisons
-• Notebook‑first workflow for quick iteration
+• Classic U‑Net with skip connections (encoder/decoder)  
+• Binary mask head (1 channel) with sigmoid at inference  
+• Dice as the primary metric; BCEWithLogitsLoss commonly used  
+• Minimal utilities for overlays and mask comparisons  
+• Notebook‑first workflow for quick iteration  
 
 ---
 
@@ -46,9 +52,9 @@ Trained weights are included at `U‑Net/checkpoint.pth`.
 
 ## Prerequisites
 
-• Python 3.8+
-• pip
-• (Optional) CUDA‑enabled GPU
+• Python 3.8+  
+• pip  
+• (Optional) CUDA‑enabled GPU  
 
 Install packages:
 
@@ -62,14 +68,14 @@ pip install opencv-python albumentations jupyterlab
 
 ## Getting Started
 
-* Clone the repository
+* Clone the repository  
 
 ```
 git clone https://github.com/franciszekparma/U-Net-PyTorch.git
 cd U-Net-PyTorch
 ```
 
-* Launch Jupyter
+* Launch Jupyter  
 
 ```
 jupyter lab   # or: jupyter notebook
@@ -95,7 +101,7 @@ Notes:
 
 • Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.
 • Images are resized/normalized in transforms; keep image size consistent across training/eval.
-• For imbalanced foreground, consider stronger augmentation or Dice‑style losses.
+• For imbalanced foreground, consider stronger augmentation or changing the loss / add a weight to a paritucal part.
 
 ---
 
@@ -103,14 +109,14 @@ Notes:
 
 * Epochs: **64** (reference)
 * Metric: **Dice coefficient** (reported on train/test)
-* Loss: commonly **BCEWithLogitsLoss** (can be combined with Dice)
-* Checkpointing: best weights saved to `U‑Net/checkpoint.pth`
+* Loss: commonly **BCEWithLogitsLoss + Dice**
+* Checkpointing: best weights saved to `U‑Net/checkpoint.pth`  
 
 Tips:
 
-• Start with a moderate image size if GPU memory is limited.
-• Monitor Dice and loss together; verify thresholds used for binarization.
-• Save `state_dict` for portability.
+• Start with a moderate image size if GPU memory is limited.  
+• Monitor Dice and loss together; verify thresholds used for binarization.  
+• Save `state_dict` for portability.  
 
 ---
 
@@ -130,21 +136,12 @@ Use this section to collect qualitative examples. Replace or add rows as you gen
 
 You can also add quick metrics snapshots (Dice/IoU) for specific subsets here.
 
----
-
-## Reproducibility
-
-• Set a global seed in PyTorch, NumPy, and Python for deterministic behavior where possible.
-• Keep train/val/test splits fixed when comparing configurations.
-• Document transforms and thresholds alongside results.
-
----
 
 ## Troubleshooting
 
-• **CUDA out of memory** → reduce batch size or image size; ensure tensors are moved off GPU when not needed.
-• **All‑black or all‑white outputs** → check mask normalization, loss/thresholding, and learning rate.
-• **Tensor size mismatch on skip connections** → verify resize/crop/stride consistency.
+• **CUDA out of memory** → reduce batch size or image size; ensure tensors are moved off GPU when not needed.  
+• **All‑black or all‑white outputs** → check mask normalization and loss/thresholding.  
+• **Tensor size mismatch on skip connections** → verify resize/crop/stride consistency. 
 
 ---
 
