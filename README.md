@@ -1,6 +1,6 @@
 # U‑Net-PyTorch
 
-A fast, compact implementation of **U‑Net** for binary semantic segmentation in PyTorch. Clean pipeline for training, evaluation, and clear visualizations.
+An end‑to‑end, under‑the‑hood tour of **U‑Net** for binary image segmentation — starting with **preparing images and masks**, continuing through the **encoder–decoder with skip connections and the loss/metric choices**, and finishing with **training, evaluation, and crisp visualizations**. Built in **PyTorch** for a clean, **reproducible pipeline you can read, tweak, and reuse**.
 
 ---
 
