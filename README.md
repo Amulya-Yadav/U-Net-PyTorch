@@ -48,7 +48,7 @@ U‑Net‑PyTorch/
 ---
 ## Sample Segmentation Results
 
-Below are two example outputs produced by the U-Net pipeline while being tested:
+Below is an example output produced by the U-Net pipeline while being tested:
 
 
 
