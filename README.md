@@ -16,7 +16,13 @@ U‑Net‑PyTorch/
 │ │ ├── Training loop with logging & checkpointing
 │ │ ├── Dice coefficient evaluation
 │ │ └── Visualization of predictions vs. ground truth
-│ └── checkpoint.pth                # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
+│ └── checkpoint.md                 # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
+│     ├── epoch                     # the epoch with the best dice score 
+│     ├── model_state_dict          # model weights
+│     ├── optimizer_state_dict      # optmizer info (contains everything PyTorch needs to resume training with the exact same optimizer state as when it was saved.)
+│     ├── lr_scheduler_state_dict   # contains info such that you can resume the schedule exactly where it left off
+│     ├── loss                      # saved loss value with the best dice score
+│     └── dice_score                # the best dice score achieved by the model while training
 ├── segmentation_comparison.png     # overlay: image + ground truth mask | image + predicted mask
 ├── mask_comparison.png             # side‑by‑side: image | ground truth | prediction
 ├── LICENSE                         # MIT License text
