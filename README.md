@@ -45,13 +45,14 @@ U‑Net‑PyTorch/
 
 Below are two example outputs produced by the U-Net pipeline while being tested:
 
-![Segmentation Comparison]([https://github.com/franciszekparma/YOLOv1-PyTorch/blob/57fb191d9d4beee2dbec3a4bef721fbcf873ea2c/sheep.png](https://github.com/franciszekparma/U-Net-PyTorch/blob/main/segmentation_comparison.png?raw=true))
+![Segmentation Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/162be42e858d2cc66024425f5293f52a38bbb23e/segmentation_comparison.png)
 
-![Mask Comparison]([https://github.com/franciszekparma/YOLOv1-PyTorch/blob/57fb191d9d4beee2dbec3a4bef721fbcf873ea2c/biker.png](https://github.com/franciszekparma/U-Net-PyTorch/blob/main/mask_comparison.png?raw=true))
+![Mask Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/aa32f4b3cc8450f17b6bf56eaa12b6467fce363c/mask_comparison.png)
 
-**Reference run:** trained for **64 epochs** 
+**Benchmark run:** trained for **64 epochs** and achieved:   
 · **Dice 0.93 (train)** 
 · **Dice 0.80 (test)**.
+
 Trained weights are included at `U‑Net/checkpoint.pth`.
 
 ---
@@ -89,8 +90,6 @@ jupyter lab   # or: jupyter notebook
 
 * Open and run `U‑Net/U‑Net.ipynb`
 
-Set your image and mask folders, adjust batch size / image size to your GPU memory, run all cells to train and evaluate.
-
 ---
 
 ## Dataset Format
@@ -99,15 +98,21 @@ Expected layout (customize paths in the notebook):
 
 ```
 DATASET_ROOT/
-├── images/   # input images (grayscale or RGB)
-└── masks/    # binary masks (0/1 or 0/255)
+├── segmentation_task/
+│   ├── train/
+│   │   ├── images/
+│   │   └── masks/
+│   └── test/
+│       ├── images/
+│       └── masks/
+...
 ```
 
 Notes:
 
 • Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.
 • Images are resized/normalized in transforms; keep image size consistent across training/eval.
-• For imbalanced foreground, consider stronger augmentation or changing the loss / add a weight to a paritucal part.
+• For imbalanced foreground, consider stronger augmentation or changing the loss / adding a weight to a paritucal part of the loss.
 
 ---
 
@@ -115,14 +120,17 @@ Notes:
 
 * Epochs: **64** (reference)
 * Metric: **Dice coefficient** (reported on train/test)
-* Loss: commonly **BCEWithLogitsLoss + Dice**
-* Checkpointing: best weights saved to `U‑Net/checkpoint.pth`  
+* Loss:   **BCEWithLogitsLoss + Dice**
+* Checkpointing: best weights saved to `checkpoint.pth`  
 
 Tips:
 
-• Start with a moderate image size if GPU memory is limited.  
+• Start with a moderate image size if GPU memory is limited. 
+• Use stronger data augmentation techniques (Horizontal Flip, ShiftScaleRotate, Blur, etc.)  
+• Use the Albumentations library for image augmentation (strongly recommended)
 • Monitor Dice and loss together; verify thresholds used for binarization.  
 • Save `state_dict` for portability.  
+• **Experiment with the code!**  
 
 ---
 
@@ -134,18 +142,10 @@ Tips:
 
 ---
 
-## Roadmap
-
-• Optional multiclass head and Cross‑Entropy loss path
-• More augmentation presets
-• Light inference script (CLI)
-• Metric suite: IoU, precision/recall, PR curves
-
----
 
 ## Contributing
 
-Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky), multi‑class extensions, documentation improvements, other improvments to the implementation.
+Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky/...), multi‑class extensions, documentation improvements, other improvements to the implementation.
 
 ---
 
