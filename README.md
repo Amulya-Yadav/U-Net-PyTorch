@@ -37,15 +37,15 @@ U‑Net‑PyTorch/
 
 ## Sample Segmentation Results
 
-<p align="center">
-  <img src="U-Net/segmentation_comparison.png" alt="Overlay: prediction on MRI" width="85%" />
-</p>
+Below are two example outputs produced by the U-Net pipeline while being tested:
 
-<p align="center">
-  <img src="U-Net/mask_comparison.png" alt="Image | Ground Truth | Prediction" width="95%" />
-</p>
+![Segmentation Comparison]([https://github.com/franciszekparma/YOLOv1-PyTorch/blob/57fb191d9d4beee2dbec3a4bef721fbcf873ea2c/sheep.png](https://github.com/franciszekparma/U-Net-PyTorch/blob/main/segmentation_comparison.png?raw=true))
 
-**Reference run:** trained for **64 epochs** · **Dice 0.93 (train)** · **Dice 0.80 (test)**.
+![Mask Comparison]([https://github.com/franciszekparma/YOLOv1-PyTorch/blob/57fb191d9d4beee2dbec3a4bef721fbcf873ea2c/biker.png](https://github.com/franciszekparma/U-Net-PyTorch/blob/main/mask_comparison.png?raw=true))
+
+**Reference run:** trained for **64 epochs** 
+· **Dice 0.93 (train)** 
+· **Dice 0.80 (test)**.
 Trained weights are included at `U‑Net/checkpoint.pth`.
 
 ---
@@ -120,23 +120,6 @@ Tips:
 
 ---
 
-## Example Results (Gallery)
-
-Use this section to collect qualitative examples. Replace or add rows as you generate more predictions.
-
-<details>
-<summary><b>Show/Hide Example Results</b></summary>
-
-|                                              Input | Ground Truth |  Prediction  |
-| -------------------------------------------------: | :----------: | :----------: |
-| <img src="U-Net/mask_comparison.png" width="280"/> |   included   |   included   |
-|                                       *(add more)* | *(add more)* | *(add more)* |
-
-</details>
-
-You can also add quick metrics snapshots (Dice/IoU) for specific subsets here.
-
-
 ## Troubleshooting
 
 • **CUDA out of memory** → reduce batch size or image size; ensure tensors are moved off GPU when not needed.  
@@ -156,7 +139,7 @@ You can also add quick metrics snapshots (Dice/IoU) for specific subsets here.
 
 ## Contributing
 
-Issues and PRs are welcome — bug fixes, training tips, alternative losses (Dice/Focal/Tversky), multi‑class extensions, and documentation improvements.
+Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky), multi‑class extensions, documentation improvements, other improvments to the implementation.
 
 ---
 
@@ -168,4 +151,5 @@ Ronneberger, Fischer, Brox — *U‑Net: Convolutional Networks for Biomedical I
 
 ## License
 
-MIT License · © franciszekparma
+This project is licensed under the MIT License.  
+© franciszekparma  
