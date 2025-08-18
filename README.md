@@ -160,7 +160,8 @@ Issues and PRs are welcome — bug fixes, training tips, alternative losses (Foc
 ---
 ## Acknowledgements
 
-Ronneberger, Fischer, Brox — *U‑Net: Convolutional Networks for Biomedical Image Segmentation* (MICCAI 2015)
+• Ronneberger, Fischer, Brox — *U‑Net: Convolutional Networks for Biomedical Image Segmentation* (MICCAI 2015)  
+• The creators of 'BRISC 2025' dataset  
 
 ---
 
