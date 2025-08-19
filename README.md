@@ -134,7 +134,7 @@ DATASET_ROOT/
 
 • Start with a moderate image size if GPU memory is limited. 
 • Use stronger data augmentation techniques (Horizontal Flip, ShiftScaleRotate, Blur, etc.)  
-• Use the Albumentations library for image augmentation (strongly recommended)
+• Use the Albumentations library for image augmentation (strongly recommended)  
 • Monitor Dice and loss together; verify thresholds used for binarization.  
 • Save `state_dict` for portability.    
 
